@@ -10,11 +10,13 @@ const getEverybody = baseURL + endpointSquad;
         let everybodySection = document.querySelector('section:nth-of-type(2)');
         let everybody = dataAll.data;
         
-        let number01 =  Math.floor( Math.random() * 5 ) + 1;
-        console.log(number01);
+  
 
 
         everybody.forEach(person => {
+
+            let number01 =  Math.floor( Math.random() * 5 ) + 1;
+            console.log(number01);
 
             let personName = person.name;
             let personImgSrc = person.avatar;
@@ -24,7 +26,7 @@ const getEverybody = baseURL + endpointSquad;
                 // do nothing
             } else { 
                 // gebruik een placeholder
-                personImgSrc = "images/placeholder1.svg";
+                personImgSrc = `images/placeholder${number01}.svg`;
             }
             if (personWebsite) { 
                 // do nothing
