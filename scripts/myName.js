@@ -4,10 +4,23 @@
 // iedereen: https://fdnd.directus.app/items/person/?fields=id,name,github_handle,avatar&filter={%22squads%22:{%22squad_id%22:{%22name%22:%22Minor%20Web%20Dev%22}}}&sort=name
 
 const baseURL = 'https://fdnd.directus.app/';
-const endpointMe = 'items/person/67';
+const endpointMe = 'items/person/222';
 
+// Hier maken we een variable met de url en de endpoint die we willen aanroepen
+const urlMe = baseURL + endpointMe;
 
+console.log(urlMe);
 
+// Hier roepen we de functie getData aan en geven we de data uit de api mee
+getData(urlMe).then( data222 => {
+	console.log(data222.data);
+// hier halen we de h1 uit de html
+	let h1 = document.querySelector('h1');
+// hier halen we de naam uit de data die we uit de api hebben gehaald
+	let myName = data222.data.name;	
+// hier veranderen we de tekst in de h1 naar de naam die we uit de api hebben gehaald
+	h1.textContent = myName;
+});
 
 
 

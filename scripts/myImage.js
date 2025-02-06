@@ -1,3 +1,22 @@
+getData(urlMe).then( data222 => {
+
+    let mySection = document.querySelector('section:nth-of-type(1)');
+
+
+    let avatar = data222.data.avatar;
+    console.log(avatar);
+
+    let myName = data222.data.name;
+    let img = document.createElement('img');
+
+    img.src = avatar;
+    img.alt = myName;
+
+    console.log(img);
+
+    mySection.appendChild(img);
+
+});
 
 
 
@@ -12,8 +31,7 @@
 
 
 
-
-/**************/
+/************/
 /* SPIEKBRIEF */
 /**************/
 
