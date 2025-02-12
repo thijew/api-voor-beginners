@@ -32,7 +32,6 @@ getData(urlMe).then( data222 => {
 
 
 
-
 /****************/
 /* FETCH DATA   */
 /* RETURNS JSON */
